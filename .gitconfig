@@ -1,0 +1,61 @@
+[user]
+	name = Kaspar Ernits
+	email = kaspar.ernits@gmail.com
+
+[core]
+    editor = vim
+    pager = less -+F
+    autocrlf = input
+
+[color]
+    ui = auto
+
+[color "branch"]
+    current = yellow bold
+    local = green bold
+    remote = cyan bold
+
+[color "status"]
+    added = green
+    changed = yellow
+    untracked = red
+
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red
+    new = green
+
+[alias]
+    st = status -sb
+    co = checkout
+    ci = commit
+    br = branch
+    df = diff
+    dc = diff --cached
+    last = log -1 HEAD
+
+    # Pretty logs
+    lg = log --color --graph --pretty=format:'%C(bold yellow)%h%Creset - %C(cyan)%an%Creset %C(green)(%ar)%Creset %C(white)%s%Creset %C(red)%d%Creset' --abbrev-commit
+    lg2 = log --color --graph --pretty=format:'%C(bold yellow)%h%Creset - %C(cyan)%an%Creset %Cgreen(%ad)%Creset%n%C(white)%s%Creset%n%b%C(red)%d%Creset' --date=short
+
+    # Fix mistakes
+    unstage = reset HEAD --
+    amend = commit --amend
+    ca = commit -a
+
+[push]
+    default = simple
+
+[init]
+    defaultBranch = main
+
+[help]
+    autocorrect = 20
+
+[merge]
+    conflictstyle = diff3
+
+[pull]
+    rebase = false
+
