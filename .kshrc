@@ -9,5 +9,5 @@ git_branch() {
 }
 
 # Prompt format: user@host:cwd (branch) $
-export PS1='$(whoami)@$(hostname):$PWD$(git_branch) $ '
+export PS1='\u@\h:$PWD$(git_branch) $ '
 
