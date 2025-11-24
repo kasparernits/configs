@@ -30,7 +30,7 @@ export PATH HOME TERM
 
 . ~/.kshrc
 
-alias vi=vim
+alias vi=nvim
 
 
 

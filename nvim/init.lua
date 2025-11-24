@@ -50,13 +50,22 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   -- Theme
   {
-    "Mofiqul/dracula.nvim",
+    "catppuccin/nvim",
+    name = "catppuccin",
     priority = 1000,
     config = function()
-      vim.cmd("colorscheme dracula")
+      require("catppuccin").setup({
+        flavour = "mocha", -- latte, frappe, macchiato, mocha
+        integrations = {
+          telescope = true,
+          treesitter = true,
+          lualine = true,
+        },
+      })
+      vim.cmd("colorscheme catppuccin")
     end,
   },
-  
+
   -- Telescope: fuzzy finder
   {
     "nvim-telescope/telescope.nvim",
